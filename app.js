@@ -3,6 +3,8 @@ var wit = require('./wit');
 var joke = require('./joke');
 var url = require('url');
 
+var port = process.env.PORT || 8766;
+
 http.createServer(function (req, res) {
     var queryObject = url.parse(req.url,true).query;
     var wit_request = wit.request_wit(queryObject.Body);
@@ -24,6 +26,6 @@ http.createServer(function (req, res) {
                 break;
         }
     });
-}).listen(8766);
+}).listen(port);
 
-console.log('Server running at http://127.0.0.1:8766/');
+console.log('Server running at http://127.0.0.1:' + port);
