@@ -8,7 +8,7 @@ var request_wit = function(user_text) {
 		path: '/message?q=' + encodeURIComponent(user_text),
 		// the Authorization header allows you to access your Wit account
 		// make sure to replace it with your own
-		headers: {'Authorization': 'Bearer IVA4JS5VHB2QKNE52KQGYRLMLBS7ZRYY'}
+		headers: {'Authorization': 'Bearer INSERT OWN KEY HERE'}
 	};
 
 	https.request(options, function(res) {
