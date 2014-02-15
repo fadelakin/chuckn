@@ -14,7 +14,11 @@ http.createServer(function (req, res) {
                 res.end("Hello, how are you?");
                 break;
             case "tell_joke":
-                joke.get_joke().when(function(err, the_joke) {
+            	var cat;
+            	if (wit.outcome.entities.category) {
+            		cat = wit.outcome.entities.category.value;
+            	}
+                joke.get_joke(cat).when(function(err, the_joke) {
                     res.end(the_joke);
                 });
                 break;
