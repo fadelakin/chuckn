@@ -12,6 +12,7 @@ http.createServer(function (req, res) {
     wit_request.when(function(err, wit) {
         if (err) console.log(err); // handle error here
         switch (wit.outcome.intent) {
+            // this case doesn't really ever get called due to the tell joke main function
             case "hello":
                 res.end("Hello, how are you?");
                 break;
