@@ -13,9 +13,12 @@ http.createServer(function (req, res) {
         if (err) console.log(err); // handle error here
         switch (wit.outcome.intent) {
             // this case doesn't really ever get called due to the tell joke main function
+            // that is why it's commmented out
+            /* 
             case "hello":
                 res.end("Hello, how are you?");
                 break;
+            */
             case "tell_joke":
             	var cat;
             	if (wit.outcome.entities.category) {
