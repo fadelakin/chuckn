@@ -1,4 +1,4 @@
-#messing around with wit.ai
+#chuckn
 
 [demo](http://fast-inlet-5756.herokuapp.com/) - gives normal jokes.
 
